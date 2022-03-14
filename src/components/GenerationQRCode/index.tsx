@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
+import { RiPencilLine } from "react-icons/ri";
+import toast from "react-hot-toast";
 
 import styles from "./styles.module.scss";
-import toast from "react-hot-toast";
 
 export function GenerationQRCode() {
   const [generatedText, setGeneratedText] = useState("");
@@ -14,11 +15,15 @@ export function GenerationQRCode() {
       toast.error("The password generated is missing in field below!");
     } else {
       let googleChartApi =
-        "https://chart.googleapis.com/chart?cht=qr&chs=278x278&chld=H&chl=";
+        "https://chart.googleapis.com/chart?cht=qr&chs=200x200&chld=H&chl=";
       let contentQRCode = googleChartApi + encodeURIComponent(generatedText);
 
       setQrcode(contentQRCode);
     }
+  };
+
+  const handleClearInput = () => {
+    setGeneratedText("");
   };
 
   return (
@@ -26,11 +31,16 @@ export function GenerationQRCode() {
       <div className={styles.content}>
         <label>Cole a sua senha aqui:</label>
 
-        <input
-          type="text"
-          value={generatedText}
-          onChange={(e) => setGeneratedText(e.target.value)}
-        />
+        <div className={styles.inputContainer}>
+          <input
+            type="text"
+            value={generatedText}
+            onChange={(e) => setGeneratedText(e.target.value)}
+          />
+          <button onClick={handleClearInput}>
+            <RiPencilLine size={24} />
+          </button>
+        </div>
 
         <button onClick={handleGenerateQRCode}>Gerar QRCode</button>
 
