@@ -1,8 +1,8 @@
-import { ConfigurationPassword } from "./components/ConfigurationPassword";
-import { Footer } from "./components/Footer";
-import { GenerationQRCode } from "./components/GenerationQRCode";
-import { Header } from "./components/Header";
-import { Social } from "./components/Social";
+import { ConfigurationPassword } from "./../components/ConfigurationPassword";
+import { Footer } from "./../components/Footer";
+import { GenerationQRCode } from "./../components/GenerationQRCode";
+import { Header } from "./../components/Header";
+import { Social } from "./../components/Social";
 
 import styles from "./Home.module.scss";
 

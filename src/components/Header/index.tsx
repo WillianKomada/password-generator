@@ -1,6 +1,6 @@
 import Lottie from "lottie-react-web";
 
-import lock from "../../../lotties/lock.json";
+import lock from "../../lotties/lock.json";
 import styles from "./styles.module.scss";
 
 export function Header() {

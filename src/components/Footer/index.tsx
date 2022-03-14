@@ -1,6 +1,6 @@
 import Lottie from "lottie-react-web";
 
-import love from "../../../lotties/love.json";
+import love from "../../lotties/love.json";
 import styles from "./styles.module.scss";
 
 export function Footer() {
