@@ -1,0 +1,48 @@
+.container {
+  width: 24rem;
+  height: 28rem;
+  background: var(--background-container);
+  border-radius: 0.5rem;
+  padding: 2rem 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  label {
+    width: 100%;
+    text-align: left;
+    font-size: 1.25rem;
+  }
+
+  input {
+    border: none;
+    width: 100%;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background: var(--background-color-input);
+    margin: 1rem 0;
+  }
+
+  button {
+    border: none;
+    border-radius: 1rem;
+    background: var(--background-color-input);
+    color: var(--text-color);
+    padding: 0.625rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  button:hover {
+    background: var(--background-button-hover);
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: 100%;
+  }
+}

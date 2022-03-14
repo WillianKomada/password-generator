@@ -1,0 +1,17 @@
+.container-menu {
+  position: absolute;
+  top: 20px;
+  right: 10%;
+
+  font-weight: bold;
+  display: flex;
+}
+
+.container-menu a {
+  text-decoration: none;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
