@@ -12,7 +12,7 @@ import styles from "./styles.module.scss";
 
 export function ConfigurationPassword() {
   const [password, setPassword] = useState("");
-  const [passwordLength, setPasswordLength] = useState(10);
+  const [passwordLength, setPasswordLength] = useState(20);
   const [includeUppercase, setIncludeUppercase] = useState(true);
   const [includeLowercase, setIncludeLowercase] = useState(true);
   const [includeNumbers, setIncludeNumbers] = useState(true);
@@ -131,12 +131,13 @@ export function ConfigurationPassword() {
           <input
             defaultValue={passwordLength}
             onChange={(e) => setPasswordLength(Number(e.target.value))}
-            type="number"
+            type="range"
             id="password-strength"
             name="password-strength"
             min={5}
             max={20}
           />
+          <output>{passwordLength}</output>
         </div>
       </div>
 
